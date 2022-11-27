@@ -6,7 +6,7 @@ python version: 2.7.8
 author asyx21
 date: 25.11.2022
 
-This programs makes the drawing pseudo-randomly taking into account potential exclusion in between two or more players.
+This program makes secret Santa's draw pseudo-randomly taking into account potential exclusion in between two or more players.
 
 The results are written in separate files and are sent by email provided that player's have one.
 
@@ -30,7 +30,7 @@ results_folder = "results"
 # parsing program arguments
 #############################################################
 if len(sys.argv) < 2:
-	print('You can specify candidates files as argument. Example "python random_drawing.py players.txt"\n\n')
+	print('You can specify candidates file as argument. Example "python random_drawing.py players.txt"\n\n')
 
 players_file = sys.argv[1] if len(sys.argv) >= 2 else players_file
 print('Player file: "{}"'.format(players_file))
