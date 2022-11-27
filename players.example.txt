@@ -1,0 +1,8 @@
+# Field as such: "NAME,PSEUDO,EMAIL,EXCEPTIONS <-- separate execpted players with "|"
+# All fields are optional except NAME
+# Use commas even if field is empty
+
+Carlos,Carlitos,carlos@xmail.com,Maria-Angéla|Juan Pablo
+Pedro,,pedro@xmail.com,Maria-Angéla
+Juan Pablo,,juanpablo@xmail.com,
+Maria-Angéla,,Carlos,
