@@ -130,7 +130,7 @@ def drawings(players_names, players_info):
 # function: helpers
 #############################################################
 def display_specific_result(dict_names, names):
-	# Pour voire une person en particulier
+	# to print a player's draw in particular
 	print('\n')
 	for key, val in dict_names.items():
 		if key in names:
@@ -150,7 +150,7 @@ if __name__ == '__main__':
 
 	prepare_results_folder(results_folder)
 
-	# creer results files
+	# creates results files
 	for key, name in dict_names.items():
 		pseudo = players_info[name][0]
 		santa_file = key + ".txt"

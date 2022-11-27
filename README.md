@@ -13,6 +13,6 @@ The results are written in separate files and are sent by email provided that pl
 
 ## How to use
 
-1. Prepare the participant file with details of the players. Use example participant.example.txt
+1. Prepare the participant file with details of the players. Use example participant.example.txt. You can name your file with `...local.txt` extension to make git ignore
 2. Install libraries with `pip install -r requirements.txt`
 3. Run `python random_drawing.py players.example.txt` giving the participant file to generate the drawing results
