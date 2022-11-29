@@ -6,7 +6,7 @@ python version: 2.7.8
 author asyx21
 date: 25.11.2022
 
-This program makes secret Santa's draw pseudo-randomly taking into account potential exclusion in between two or more players.
+This program makes Secret Santa's draw pseudo-randomly taking into account potential exclusion in between two or more players.
 
 The results are written in separate files and are sent by email provided that player's have one.
 
@@ -134,9 +134,9 @@ if __name__ == '__main__':
 		pseudo = players_info[name][0]
 		santa_file = key + ".txt"
 		if pseudo != '':
-			surprise_name = 'You are the secret Santa of {} "{}"\n\nMerry Christmas !\n'.format(name, pseudo)
+			surprise_name = 'You are the Secret Santa of {} "{}"\n\nMerry Christmas !\n'.format(name, pseudo)
 		else:
-			surprise_name = 'You are the secret Santa of {}\n\nMerry Christmas !\n'.format(name)
+			surprise_name = 'You are the Secret Santa of {}\n\nMerry Christmas !\n'.format(name)
 		
 		with open(santa_file, 'w+') as file:
 			file.write(surprise_name)
