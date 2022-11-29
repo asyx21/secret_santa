@@ -20,3 +20,4 @@ The results are written in separate files and are sent by email provided that pl
 4. Run first `python random_drawing.py players.example.txt` giving the participant file to generate the drawing results
 5. Create an account (free) on mailjet: `https://www.mailjet.com/pricing`
 6. The run `send_email.py` to send results to participants by email. Here you must provide Mailjet API credentials in `.env` file. Please find `.env.example` as template
+7. Once everything is setup you can use `run_all.sh` script as one liner command to run both scripts - with default config
