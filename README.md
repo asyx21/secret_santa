@@ -10,6 +10,7 @@ The results are written in separate files and are sent by email provided that pl
 ## scripts
 
 - `random_drawing.py`
+- `send_email.py`
 
 ## How to use
 
@@ -17,3 +18,5 @@ The results are written in separate files and are sent by email provided that pl
 2. Prepare the participant file with details of the players. Use example participant.example.txt. You can name your file with `...local.txt` extension to make git ignore
 3. Install libraries with `pip install -r requirements.txt`
 4. Run first `python random_drawing.py players.example.txt` giving the participant file to generate the drawing results
+5. Create an account (free) on mailjet: `https://www.mailjet.com/pricing`
+6. The run `send_email.py` to send results to participants by email. Here you must provide Mailjet API credentials in `.env` file. Please find `.env.example` as template

@@ -2,7 +2,7 @@
 # All fields are optional except NAME
 # Use commas even if field is empty
 
-Carlos,Carlitos,carlos@xmail.com,Maria-Angéla|Juan Pablo
-Pedro,,pedro@xmail.com,Maria-Angéla
-Juan Pablo,,juanpablo@xmail.com,
-Maria-Angéla,,Carlos,
+Carlos,Carlitos,carlos@yopmail.com,Maria-Angéla|Juan Pablo
+Pedro,,pedro@yopmail.com,Maria-Angéla
+Juan Pablo,,juanpablo@yopmail.com,
+Maria-Angéla,,,Carlos

@@ -19,6 +19,7 @@ import os
 import sys
 import random
 import glob
+from common import extract_players_info
 
 #############################################################
 # global variables
@@ -42,28 +43,6 @@ if len(sys.argv) >= 3:
 #############################################################
 # functions: file and folder I/O
 #############################################################
-def extract_players_info(file):
-	players_names = list()
-	players = list()
-	players_info = dict()
-
-	with open(file, 'r') as file_read:
-		players = [line.rstrip('\n') for line in file_read]
-		file_read.close()
-
-	for line in players:
-		if line == '' or line.startswith('#'):
-			continue
-		person = line.split(",")
-
-		#print person
-		# players_info['name'][0] correspond au pseudo, players_info['name'][1] à l'email
-		players_info[person[0]] = (person[1], person[2], person[3])
-		players_names.append(person[0])
-
-	print('\nHere is the list of {} names:\n\n{}\n\n'.format(str(len(players_names)), players_names))
-	return (players_names, players, players_info)
-
 def prepare_results_folder(res_folder):
 	# change directory
 	#print os.getcwd()
@@ -142,7 +121,7 @@ def display_specific_result(dict_names, names):
 #############################################################
 if __name__ == '__main__':
 	# names parsing
-	[players_names, player, players_info] = extract_players_info(players_file)
+	[players_names, players_info, _] = extract_players_info(players_file)
 
 	# drawings
 	dict_names = drawings(players_names, players_info)
@@ -155,14 +134,14 @@ if __name__ == '__main__':
 		pseudo = players_info[name][0]
 		santa_file = key + ".txt"
 		if pseudo != '':
-			surprise_name = 'You are the Santa of {} "{}"\n\nMerry Christmas !\n'.format(name, pseudo)
+			surprise_name = 'You are the secret Santa of {} "{}"\n\nMerry Christmas !\n'.format(name, pseudo)
 		else:
-			surprise_name = 'You are the Santa of {}\n\nMerry Christmas !\n'.format(name)
+			surprise_name = 'You are the secret Santa of {}\n\nMerry Christmas !\n'.format(name)
 		
 		with open(santa_file, 'w+') as file:
 			file.write(surprise_name)
 			file.close()
 
-	print('\nPROGRAM FINISHED: Results in folder "{}"\n'.format(results_folder))
+	print('\nPROGRAM FINISHED: random_drawing.py - Results in folder "{}"\n'.format(results_folder))
 	#raw_input("press any key to end program")
 
